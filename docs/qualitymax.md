@@ -54,8 +54,10 @@ Deploy this fork's Dockerfile; Railway detects it automatically. In service
 Settings, set the Healthcheck Path to `/healthcheck`, leave the restart policy
 on On Failure, and set Max restart retries to `3`. New services use the dashboard
 settings because Railway has deprecated `railway.json` configuration.
-The app is stateless and needs no database or volume. Public traffic targets
-port `3000`; the server listens on `0.0.0.0`.
+The app is stateless and needs no database or volume. The server listens on
+`0.0.0.0` and uses Railway's `PORT`. Select the port detected by Railway for
+each public domain: the current deployment uses `8080`. The Docker image's
+fallback port outside Railway is `3000`.
 
 For GitHub automatic deployments, connect
 `Quality-Max/qualitymax-links`, branch `main`, in the Railway service's
@@ -70,13 +72,15 @@ railway up --detach --service qualitymax-links
 Generate a Railway domain in Settings → Networking. For a branded address,
 add `qmax.run` as a custom domain and copy Railway's exact DNS records
 into Cloudflare. The current service requests a root CNAME to
-`1nz3wzx8.up.railway.app`, port 3000, plus a `_railway-verify` TXT record whose
+`1nz3wzx8.up.railway.app`, target port `8080`, plus a `_railway-verify` TXT record whose
 public verification value is shown in Railway's domain dialog. Add both records.
 Replace the retiring installer root records; preserve the previous target as a
 rollback record and keep existing verification records. Cloudflare supports root
 CNAME flattening. Keep the existing Cloudflare proxy and TLS protections enabled.
 Wait for domain verification and HTTPS before printing QR codes. The branded
-default `OG_URL` is `https://qmax.run/`.
+default `OG_URL` is `https://qmax.run/`. The live domain is verified and serves
+the kitten hub over HTTPS. The previous installer target is retained as
+`legacy-installer.qmax.run` for rollback.
 
 Configuration changes require a redeploy or restart. Confirm `/healthcheck`
 returns HTTP 200 and check the page on mobile after each release. Roll back
