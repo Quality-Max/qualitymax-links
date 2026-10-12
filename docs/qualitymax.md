@@ -25,7 +25,7 @@ LittleLink defaults from this list. Keep event identifiers stable.
 | Get 9lives | [9lives](https://9lives.run/) | `9lives-button` |
 | Meet qmax-code | [qmax-code](https://qualitymax.io/qmax-code) | `qmax-code-button` |
 | Documentation | [Docs](https://docs.qualitymax.io/) | `docs-button` |
-| 9lives Go runner | [Runner](https://quality-max.github.io/9lives-runner/) | `9lives-go-runner-button` |
+| 9lives GitHub | [Source](https://github.com/Quality-Max/9lives-runner) | `9lives-go-runner-button` |
 | QualityMax GitHub | [Source](https://github.com/Quality-Max/qualitymax) | `qualitymax-github-button` |
 | qmax-code GitHub | [Source](https://github.com/Quality-Max/qmax-code) | `qmax-code-github-button` |
 | X / Twitter | [Profile](https://x.com/QualityMaxApp) | `twitter-button` |

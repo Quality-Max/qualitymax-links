@@ -104,11 +104,12 @@ export const DESTINATIONS: Destination[] = [
   },
   {
     id: 'runner',
-    label: '9lives Go runner',
-    aria: '9lives Go runner explainer page',
-    url: 'https://quality-max.github.io/9lives-runner/',
+    label: '9lives GitHub',
+    aria: '9lives runner source code on GitHub (Quality-Max/9lives-runner)',
+    url: 'https://github.com/Quality-Max/9lives-runner',
     event: '9lives-go-runner-button',
     variant: 'quiet',
+    icon: 'gh',
     part: 'Hind paw',
     region: {
       x: 39,
@@ -290,11 +291,11 @@ export const GROUPS = [
   },
   {
     title: 'Tools and docs',
-    ids: ['qmax-code', '9lives', 'runner', 'docs'],
+    ids: ['qmax-code', '9lives', 'docs'],
   },
   {
     title: 'Source code',
-    ids: ['qm-gh', 'qc-gh'],
+    ids: ['qm-gh', 'qc-gh', 'runner'],
   },
   {
     title: 'Follow QualityMax',
