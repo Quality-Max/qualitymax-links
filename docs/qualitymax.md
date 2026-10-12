@@ -33,8 +33,10 @@ The hub defaults to `noindex,follow` to keep search traffic on the main site.
 
 ## Railway deployment
 
-Deploy this fork's Dockerfile. `railway.json` selects the Dockerfile builder,
-checks `/healthcheck`, and retries failed processes up to three times.
+Deploy this fork's Dockerfile; Railway detects it automatically. In service
+Settings, set the Healthcheck Path to `/healthcheck`, leave the restart policy
+on On Failure, and set Max restart retries to `3`. New services use the dashboard
+settings because Railway has deprecated `railway.json` configuration.
 The app is stateless and needs no database or volume. Public traffic targets
 port `3000`; the server listens on `0.0.0.0`.
 
@@ -146,3 +148,9 @@ Skip `git remote add` if the remote already exists. Review conflicts, analytics
 events, Docker configuration, and the branded page. Open a PR into this fork's
 `main` branch after browser verification. Upstream container publishing is
 restricted to the original repository; the fork deploys through Railway.
+
+### Railway Docker cache compatibility
+
+The QualityMax Dockerfile uses standard Docker layer caching. Upstream BuildKit
+cache mounts were removed because Railway requires service-specific mount IDs.
+This keeps the fork portable across Railway projects and other Docker hosts.
