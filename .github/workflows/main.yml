@@ -25,6 +25,7 @@ jobs:
 
   publish-images:
     name: Publish container images
+    if: github.repository == 'timothystewart6/littlelink-server'
     needs: [quality-gate, browser-e2e, container-e2e]
     permissions:
       actions: write

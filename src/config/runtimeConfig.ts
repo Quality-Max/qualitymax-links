@@ -12,6 +12,7 @@
 import { ENV_NAMES } from './envNames';
 export { ENV_NAMES } from './envNames';
 import type { EnvName } from './envNames';
+import { QUALITYMAX_DEFAULTS } from './qualitymax';
 
 export type RuntimeConfig = Readonly<Record<EnvName, string | undefined>>;
 export type Theme = 'dark' | 'light';
@@ -28,7 +29,11 @@ export function getRuntimeConfig(
   }
   const config: Record<string, string | undefined> = {};
   for (const key of ENV_NAMES) {
-    config[key] = env[key];
+    config[key] =
+      env[key] ??
+      (env.QUALITYMAX_BRANDING === 'true'
+        ? QUALITYMAX_DEFAULTS[key]
+        : undefined);
   }
   return config as RuntimeConfig;
 }

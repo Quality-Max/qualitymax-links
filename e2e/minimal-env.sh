@@ -1,10 +1,10 @@
 #!/bin/bash
-# e2e:minimal - Run e2e tests against a Docker container with no env vars
+# e2e:minimal - Check upstream defaults without the fork's branded defaults
 set -euo pipefail
 
 echo "Starting minimal-env Docker container..."
 IMAGE_NAME=${IMAGE_NAME:-littlelink-server:nextjs-test}
-CONTAINER_ID=$(docker run --rm -d -p 3002:3000 "$IMAGE_NAME")
+CONTAINER_ID=$(docker run --rm -d -e QUALITYMAX_BRANDING=false -p 3002:3000 "$IMAGE_NAME")
 trap "docker stop $CONTAINER_ID >/dev/null 2>&1" EXIT
 
 sleep 3

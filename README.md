@@ -1,4 +1,11 @@
-# 🔗 LittleLink-Server
+# QualityMax Links
+
+QualityMax's branded link hub, maintained as a small fork of LittleLink-Server.
+The Docker image enables QualityMax defaults; environment variables can override
+the public content. See the [QualityMax deployment guide](docs/qualitymax.md)
+for Railway hosting, analytics, and upstream updates.
+
+## 🔗 LittleLink-Server
 
 LittleLink-Server is a lightweight, self-hosted link page for publishing a profile, avatar, social links, custom buttons, metadata, analytics, and health checks from environment variables.
 
@@ -245,5 +252,4 @@ Or use a values.yaml file:
 See [docs/analytics.md](docs/analytics.md) for analytics setup instructions and [docs/healthcheck.md](docs/healthcheck.md) for health check configuration.
 
 Environment variables are read at request time, so changes take effect after a container restart without rebuilding the image.
-
 

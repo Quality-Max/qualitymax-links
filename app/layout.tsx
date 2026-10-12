@@ -78,6 +78,7 @@ export default async function RootLayout({
         {cfg.THEME_OS && <link rel="stylesheet" href="css/os.css" />}
         <link rel="stylesheet" href="css/littlelink.css" />
         <link rel="stylesheet" href="css/brands.css" />
+        <link rel="stylesheet" href="/css/qualitymax.css" />
         {cfg.FAVICON_URL && (
           <link rel="icon" type="image/png" href={cfg.FAVICON_URL} />
         )}

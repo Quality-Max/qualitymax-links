@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("/qualitymax/fonts/dm-sans-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/qualitymax/fonts/space-grotesk-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+html.dark {
+  --bg-color: #09090b;
+  --font-color: #fafafa;
+  --a-color: #a78bfa;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 520px;
+}
+
+.container .column {
+  margin-top: 56px !important;
+}
+
+.avatar {
+  width: 220px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.column > p:not(.footer) {
+  color: #a78bfa;
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+.container .button {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 56px;
+  padding: 14px 20px;
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: border-color 0.15s ease;
+}
+
+.container .button[data-analytics-event="demo-button"] {
+  border-color: #6366f1;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .button:hover {
+  border-color: #a78bfa;
+}
+
+.container .button:focus-visible {
+  outline: 3px solid #a78bfa;
+  outline-offset: 4px;
+}
+
+.footer {
+  color: #a1a1aa;
+  font-size: 14px;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container .button {
+    transition: none;
+  }
+}
