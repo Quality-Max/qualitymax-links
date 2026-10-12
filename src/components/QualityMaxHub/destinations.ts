@@ -1,0 +1,310 @@
+export interface Destination {
+  id: string;
+  label: string;
+  aria: string;
+  url: string;
+  event: string;
+  variant: string;
+  icon?: string;
+  part?: string;
+  region?: { x: number; y: number; w: number; h: number };
+  desk?: { x: number; y: number; w: number; align: string; side: string };
+}
+
+export const DESTINATIONS: Destination[] = [
+  {
+    id: 'twitter',
+    label: 'X / Twitter',
+    aria: 'QualityMax on X (Twitter)',
+    url: 'https://x.com/QualityMaxApp',
+    event: 'twitter-button',
+    variant: 'social',
+    icon: 'x',
+    part: 'Left ear',
+    region: {
+      x: 56,
+      y: 11,
+      w: 10,
+      h: 10,
+    },
+    desk: {
+      x: 0,
+      y: 123,
+      w: 360,
+      align: 'end',
+      side: 'r',
+    },
+  },
+  {
+    id: 'qm-gh',
+    label: 'QualityMax GitHub',
+    aria: 'QualityMax source code on GitHub (Quality-Max/qualitymax)',
+    url: 'https://github.com/Quality-Max/qualitymax',
+    event: 'qualitymax-github-button',
+    variant: 'quiet',
+    icon: 'gh',
+    part: 'Left cheek',
+    region: {
+      x: 54,
+      y: 36,
+      w: 9,
+      h: 8,
+    },
+    desk: {
+      x: 0,
+      y: 228,
+      w: 360,
+      align: 'end',
+      side: 'r',
+    },
+  },
+  {
+    id: 'docs',
+    label: 'Documentation',
+    aria: 'QualityMax documentation',
+    url: 'https://docs.qualitymax.io/',
+    event: 'docs-button',
+    variant: 'quiet',
+    part: 'Curved tail',
+    region: {
+      x: 24,
+      y: 43,
+      w: 16,
+      h: 18,
+    },
+    desk: {
+      x: 0,
+      y: 312,
+      w: 360,
+      align: 'end',
+      side: 'r',
+    },
+  },
+  {
+    id: '9lives',
+    label: 'Get 9lives',
+    aria: 'Get 9lives at 9lives.run',
+    url: 'https://9lives.run/',
+    event: '9lives-button',
+    variant: 'quiet',
+    part: 'Belly',
+    region: {
+      x: 45,
+      y: 73,
+      w: 14,
+      h: 10,
+    },
+    desk: {
+      x: 0,
+      y: 445,
+      w: 360,
+      align: 'end',
+      side: 'r',
+    },
+  },
+  {
+    id: 'runner',
+    label: '9lives Go runner',
+    aria: '9lives Go runner explainer page',
+    url: 'https://quality-max.github.io/9lives-runner/',
+    event: '9lives-go-runner-button',
+    variant: 'quiet',
+    part: 'Hind paw',
+    region: {
+      x: 39,
+      y: 91,
+      w: 10,
+      h: 8,
+    },
+    desk: {
+      x: 0,
+      y: 561,
+      w: 360,
+      align: 'end',
+      side: 'r',
+    },
+  },
+  {
+    id: 'youtube',
+    label: 'YouTube',
+    aria: 'QualityMax on YouTube',
+    url: 'https://www.youtube.com/@Quality-Max-dev',
+    event: 'youtube-button',
+    variant: 'social',
+    icon: 'yt',
+    part: 'Forehead',
+    region: {
+      x: 69,
+      y: 22,
+      w: 10,
+      h: 8,
+    },
+    desk: {
+      x: 545,
+      y: 22,
+      w: 200,
+      align: 'center',
+      side: 'b',
+    },
+  },
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    aria: 'QualityMax on LinkedIn',
+    url: 'https://www.linkedin.com/company/qualitymax/',
+    event: 'linkedin-button',
+    variant: 'social',
+    icon: 'li',
+    part: 'Right ear',
+    region: {
+      x: 94,
+      y: 20,
+      w: 9,
+      h: 12,
+    },
+    desk: {
+      x: 800,
+      y: 160,
+      w: 320,
+      align: 'start',
+      side: 'l',
+    },
+  },
+  {
+    id: 'qc-gh',
+    label: 'qmax-code GitHub',
+    aria: 'qmax-code source code on GitHub (Quality-Max/qmax-code)',
+    url: 'https://github.com/Quality-Max/qmax-code',
+    event: 'qmax-code-github-button',
+    variant: 'quiet',
+    icon: 'gh',
+    part: 'Right cheek',
+    region: {
+      x: 81,
+      y: 42,
+      w: 9,
+      h: 8,
+    },
+    desk: {
+      x: 800,
+      y: 270,
+      w: 320,
+      align: 'start',
+      side: 'l',
+    },
+  },
+  {
+    id: 'platform',
+    label: 'QualityMax',
+    aria: 'QualityMax platform at qualitymax.io',
+    url: 'https://qualitymax.io/',
+    event: 'platform-button',
+    variant: 'quiet',
+    part: 'Collar tag',
+    region: {
+      x: 65,
+      y: 52,
+      w: 7,
+      h: 6,
+    },
+    desk: {
+      x: 800,
+      y: 350,
+      w: 320,
+      align: 'start',
+      side: 'l',
+    },
+  },
+  {
+    id: 'qmax-code',
+    label: 'Meet qmax-code',
+    aria: 'Meet qmax-code, the QualityMax coding agent',
+    url: 'https://qualitymax.io/qmax-code',
+    event: 'qmax-code-button',
+    variant: 'quiet',
+    part: 'Chest',
+    region: {
+      x: 64,
+      y: 61,
+      w: 12,
+      h: 7,
+    },
+    desk: {
+      x: 800,
+      y: 430,
+      w: 320,
+      align: 'start',
+      side: 'l',
+    },
+  },
+  {
+    id: 'demo',
+    label: 'Book a demo',
+    aria: 'Book a QualityMax demo (Google Calendar)',
+    url: 'https://calendar.app.google/66H2NEs2MoATZ93i6',
+    event: 'demo-button',
+    variant: 'primary',
+    part: 'Left front paw',
+    region: {
+      x: 59,
+      y: 94,
+      w: 12,
+      h: 8,
+    },
+    desk: {
+      x: 380,
+      y: 648,
+      w: 236,
+      align: 'end',
+      side: 'tr',
+    },
+  },
+  {
+    id: 'proof',
+    label: 'See a verified fix',
+    aria: 'See a verified fix: QualityMax verified patch sample',
+    url: 'https://qualitymax.io/verified-patch-sample',
+    event: 'proof-button',
+    variant: 'outline',
+    part: 'Right front paw',
+    region: {
+      x: 78,
+      y: 93,
+      w: 12,
+      h: 8,
+    },
+    desk: {
+      x: 652,
+      y: 648,
+      w: 260,
+      align: 'start',
+      side: 'tl',
+    },
+  },
+];
+
+export const GROUPS = [
+  {
+    title: 'Start here',
+    ids: ['demo', 'proof', 'platform'],
+  },
+  {
+    title: 'Tools and docs',
+    ids: ['qmax-code', '9lives', 'runner', 'docs'],
+  },
+  {
+    title: 'Source code',
+    ids: ['qm-gh', 'qc-gh'],
+  },
+  {
+    title: 'Follow QualityMax',
+    ids: ['twitter', 'linkedin', 'youtube'],
+  },
+];
+
+export const ICONS: Record<string, string> = {
+  x: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z',
+  li: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+  yt: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
+  gh: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+};

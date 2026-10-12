@@ -1,4 +1,6 @@
 import React from 'react';
+import QualityMaxHub from '../src/components/QualityMaxHub/QualityMaxHub';
+import { getHubContent } from '../src/components/QualityMaxHub/content';
 import Home from '../src/components/Home/Home';
 import AnalyticsTracker from '../src/analytics/AnalyticsTracker';
 import { getRuntimeConfig } from '../src/config/runtimeConfig';
@@ -10,7 +12,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Home config={config} />
+      {process.env.QUALITYMAX_BRANDING === 'true' ? (
+        <QualityMaxHub {...getHubContent(config)} />
+      ) : (
+        <Home config={config} />
+      )}
       <AnalyticsTracker
         gaTrackingId={config.GA_TRACKING_ID}
         umamiWebsiteId={config.UMAMI_WEBSITE_ID}

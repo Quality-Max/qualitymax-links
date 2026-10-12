@@ -20,7 +20,8 @@
     "lint": "eslint .",
     "lint:style": "stylelint ./src/**/*.css ./public/**/*.css",
     "lint:markdown": "markdownlint .github/*.md && markdownlint README.md CONTRIBUTING.md",
-    "ci": "yarn lint && yarn lint:style && yarn lint:markdown && yarn compose-env:check && yarn typecheck && yarn test"
+    "ci": "yarn lint && yarn lint:style && yarn lint:markdown && yarn compose-env:check && yarn typecheck && yarn test",
+    "test:e2e:qualitymax": "playwright test --config playwright.qualitymax.config.ts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

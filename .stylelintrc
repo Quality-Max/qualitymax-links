@@ -1,24 +1,13 @@
 {
-    "extends": [
+  "extends": [],
+  "rules": {
+    "block-no-empty": null,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": ["stylelint-commands", "after-comment"]
+      }
     ],
-    "rules": {
-        "block-no-empty": null,
-        "comment-empty-line-before": [
-            "always",
-            {
-                "ignore": [
-                    "stylelint-commands",
-                    "after-comment"
-                ]
-            }
-        ],
-        "unit-allowed-list": [
-            "em",
-            "rem",
-            "%",
-            "s",
-            "px",
-            "deg"
-        ]
-    }
+    "unit-allowed-list": ["em", "rem", "%", "s", "px", "deg", "fr"]
+  }
 }
