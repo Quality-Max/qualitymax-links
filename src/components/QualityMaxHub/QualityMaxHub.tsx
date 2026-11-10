@@ -148,6 +148,62 @@ export default function QualityMaxHub({
             </h1>
             <p>Meet Max. Pick a spot to explore.</p>
           </div>
+          <section className="qmax-updates" aria-label="Latest from QualityMax">
+            <article className="qmax-update qmax-launch">
+              <p className="qmax-update-label">Live on Product Hunt</p>
+              <h2>Meet 9lives.</h2>
+              <p className="qmax-update-summary">
+                Open-source e2e testing for coding agents.
+              </p>
+              <p>
+                Start with your Playwright tests. Give your coding agent MCP
+                tools and execution receipts. Run locally, without a platform
+                account.
+              </p>
+              <div className="qmax-update-actions">
+                <a
+                  href="https://www.producthunt.com/products/9lives"
+                  target={target}
+                  rel="noopener noreferrer"
+                  data-analytics-event="9lives-product-hunt"
+                  className="qmax-update-primary"
+                >
+                  See 9lives on Product Hunt <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href="https://9lives.run/"
+                  target={target}
+                  rel="noopener noreferrer"
+                  data-analytics-event="9lives-website"
+                >
+                  Explore 9lives <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+            <article className="qmax-update qmax-websummit">
+              <p className="qmax-update-label">Web Summit Lisbon 2026</p>
+              <h2>Let’s talk over coffee.</h2>
+              <p className="qmax-update-summary">
+                AI writes the code. Who checks it?
+              </p>
+              <p>Meet QualityMax and see how we verify AI-generated code.</p>
+              <p className="qmax-booth">
+                <time dateTime="2026-11-11">Wednesday, 11 November</time>
+                <strong>Pavilion 3 · Booth A6-02</strong>
+              </p>
+              <div className="qmax-update-actions">
+                <a
+                  href="https://www.linkedin.com/in/ruslanstraznhyk/"
+                  target={target}
+                  rel="noopener noreferrer"
+                  data-analytics-event="websummit-meet-ruslan"
+                  className="qmax-update-primary"
+                >
+                  Meet Ruslan <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </section>
           <nav
             aria-label="Max the kitten navigation"
             className="qmax-mascot-nav"

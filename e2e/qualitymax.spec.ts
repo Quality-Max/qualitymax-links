@@ -9,6 +9,20 @@ for (const width of [320, 390, 640, 768, 900, 1280, 1440]) {
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(
       'AI writes the code.QualityMax verifies it.',
     );
+    const updates = page.getByRole('region', {
+      name: 'Latest from QualityMax',
+    });
+    await expect(
+      updates.getByRole('heading', { name: 'Meet 9lives.' }),
+    ).toBeVisible();
+    await expect(
+      updates.getByRole('link', { name: /See 9lives on Product Hunt/ }),
+    ).toHaveAttribute('href', 'https://www.producthunt.com/products/9lives');
+    await expect(updates.getByText('Wednesday, 11 November')).toBeVisible();
+    await expect(updates.getByText('Pavilion 3 · Booth A6-02')).toBeVisible();
+    await expect(
+      updates.getByRole('link', { name: /Meet Ruslan/ }),
+    ).toHaveAttribute('href', 'https://www.linkedin.com/in/ruslanstraznhyk/');
     const nav = page.getByRole('navigation', { name: 'All destinations' });
     await expect(nav.getByRole('link')).toHaveCount(12);
     await expect(page.getByAltText(/Max, the black/)).toBeVisible();
@@ -83,6 +97,10 @@ test('text navigation works with JavaScript disabled', async ({ browser }) => {
   await expect(
     page.getByRole('link', { name: 'Collar tag: QualityMax' }),
   ).toHaveAttribute('href', 'https://qualitymax.io/');
+  await expect(
+    page.getByRole('link', { name: /See 9lives on Product Hunt/ }),
+  ).toBeVisible();
+  await expect(page.getByText('Pavilion 3 · Booth A6-02')).toBeVisible();
   await context.close();
 });
 

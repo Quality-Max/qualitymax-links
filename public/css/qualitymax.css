@@ -237,6 +237,92 @@ body.qualitymax-theme {
   border-radius: 16px;
   color: #4a4570;
 }
+.qmax-updates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 8px auto 32px;
+}
+.qmax-update {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid rgb(25 19 79 / 12%);
+  border-radius: 20px;
+  background: #edeafa;
+}
+.qmax-update p {
+  margin: 0 0 16px;
+}
+.qmax-update .qmax-update-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.qmax-hub .qmax-update h2 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  color: inherit;
+}
+.qmax-update-summary {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.qmax-booth time,
+.qmax-booth strong {
+  display: block;
+}
+.qmax-update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.qmax-update-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 600;
+}
+.qmax-update-actions .qmax-update-primary {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #4338ca;
+  color: #fff;
+}
+.qmax-update-actions .qmax-update-primary:hover {
+  background: #3126a5;
+}
+.qmax-launch {
+  background: #19134f;
+  color: #f6f3ec;
+}
+.qmax-launch .qmax-update-label {
+  color: #ffb49d;
+}
+.qmax-launch a {
+  color: #e3ddff;
+}
+.qmax-launch a:hover {
+  color: #fff;
+}
+.qmax-launch .qmax-update-primary {
+  background: #f7e9df;
+  color: #19134f;
+}
+.qmax-launch .qmax-update-primary:hover {
+  background: #fff;
+  color: #19134f;
+}
 .qmax-all-links {
   max-width: 960px;
   margin: 56px auto 0;
@@ -288,6 +374,11 @@ body.qualitymax-theme {
   color: #4a4570;
 }
 @media (max-width: 899px) {
+  .qmax-updates {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
   .qmax-intro {
     padding: 36px 0 18px;
   }
@@ -334,6 +425,9 @@ body.qualitymax-theme {
   }
 }
 @media (max-width: 420px) {
+  .qmax-update {
+    padding: 22px;
+  }
   .qmax-brand img {
     height: 22px;
   }
